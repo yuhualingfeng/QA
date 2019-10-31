@@ -2,6 +2,10 @@
 收集技术上遇到的一些问题及解决方案
 + [webpack](webpack.md)
 
+### 如何结束一个被占用的端口号?
++ 打开cmd命令窗口，输入命令：netstat -ano | findstr 8080，根据端口号查找对应的PID
++ 根据PID结束对应进程。输入命令taskkill -PID 2188 -F，强制关闭PID为2188的进程。
+
 ### IE中的xhr请求存在缓存，如何处理?
 + 在请求参数中添加一个时间戳参数,例如time:Date.now()
 ### 多内核浏览器(QQ,360)如何设置默认内核？
@@ -18,7 +22,7 @@
     let arr = [1,2,3,4];
     try{
         arr.forEach((item)=>{
-            console.log(item);
+            console.log(item); 
             if(item==2){
                 throw new Error('break');
             }
