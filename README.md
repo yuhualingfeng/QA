@@ -18,6 +18,8 @@
     }
 ```
 
+*********
+
 ## React Router如何在不重载页面的情况下刷新当前路由？
 先跳转到一个空白页面，然后在空白页面获取需要跳转的路由并执行跳转。
 ```javascript
@@ -34,6 +36,7 @@ export default function Blank (props){
     return (<></>);
 }
 ```
+
 *********
 
 ## React Router如何为路由组件传入数据？
