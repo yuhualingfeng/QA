@@ -9,11 +9,80 @@
     + 存在技术难点可以通过自我思考，网络求助，借助开源库或工具。
 
 *********
+## 对于生成器函数的理解
+## react-redux封装了哪些常用的方法？
++ connect()
++ Provider 组件
+
+*********
+
+## React的生命周期函数
+1. 挂载
+    + constructor()
+    + static getDerivedStateFromProps()
+    + render()
+    + componentDidMount()
+2. 更新
+    + static getDerivedStateFromProps()
+    + shouldComponentUpdate()
+    + render()
+    + getSnapShotBeforeUpdate()
+    + componentDidUpdate()
+3. 卸载
+    + componentWillUnmount()
+4. 错误处理
+    + static getDerivedStateFromError()
+    + componentDidCatch()
+
+*********
+
+
+
+## 常常提到的副作用Effect具体指的什么?
++ 发送网络请求，手动变更 DOM，记录日志,访问浏览器缓存
++ 事件订阅(需要清除的 effect,防止引起内存泄露)
+
+*********
+## Redux Toolkit封装了哪些常用方法？
++ configureStore
++ 
+## 为什么使用Redux Toolkit ?
++ Redux Toolkit 封装一些方法，让我们更加方便和正确的开发Redux App
++ Redux Toolkit内置了immer,redux-thunk
+
+*********
+
+## 为什么使用immer ?
++ 在生产不可变数据时,避免了过多的使用扩展运算符`...`或者deepCopy.
++ 在生产不可变数据时,提升了性能和减少了不必要的渲染.
+
+*********
+## redux-saga封装了哪些常用方法 ?
+
+
+## redux-saga用途
++ redux saga是一个库，旨在使应用程序的副作用（即数据获取之类的异步事情和访问浏览器缓存之类的不纯事情）更易于管理、更高效地执行、更易于测试，并更好地处理故障。
+
+*********
+
+## redux-thunk用途
++ 通过dispatch function的形式来处理副作用，例如网络请求.
+
+*********
+
+## 常用的Hooks
++ useState
++ useEffect
++ useContext
++ useMemo
++ useCallback
++ useRef
 
 ## Hooks的优点
 1. 在不编写 class 的情况下使用 state 以及其他的 React 特性
 2. 用更简洁的代码实现class相同的功能
 3. 更方便的实现代码重用
+4. 更纯粹，不再需要在classes,function,hight-order components之间来回切换.
 
 *********
 
