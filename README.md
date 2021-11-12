@@ -10,9 +10,24 @@
 
 *********
 ## 对于生成器函数的理解
+
+*********
+
+## 为什么我会在我的函数中看到陈旧的 props 和 state ？
+组件内部的任何函数，包括事件处理函数和 effect，都是从它被创建的那次渲染中被「看到」的。例如我们给界面中的echarts绑定了事件,这个事件处理器读取不到最新的状态,可以使用`useRef`来读取最新状态
+```javascript
+const [name,setName] = useState('Jake');
+const ref = useRef();
+ref.current = name;
+```
+在函数体内读取ref.current便可获取最新的name;
+
+*********
+
 ## react-redux封装了哪些常用的方法？
 + connect()
 + Provider 组件
++ useSelector,useDispatch
 
 *********
 
